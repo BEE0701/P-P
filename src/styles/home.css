@@ -1,0 +1,265 @@
+#home {
+background: var(--lightGray);
+  height: calc(100vh + 1300px);
+  position: relative;
+  overflow: hidden;
+
+}
+
+.homeInner {
+   width: min(1500px, 88%);
+  height: 100vh;
+  margin: 0 auto;
+}
+#home.homeFixed .homeInner {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1500px, 88%);
+  z-index: 2;
+}
+
+/* 고정 끝난 뒤 */
+#home.homeEnd .homeInner {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1500px, 88%);
+}
+.homeWrap {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  align-items: center;
+  gap: 80px;
+}
+.homeLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.homeText {
+  color: #b8b8b8;
+}
+
+.homeText p:first-child {
+  font-size: 40px;
+  margin-bottom: 46px;
+}
+
+.homeText h1 {
+  font-size: clamp(52px, 4.2vw, 84px);
+  line-height: 1.25;
+  font-weight: 800;
+  margin-bottom: 56px;
+}
+
+.homeText strong {
+  color: #111;
+  font-weight: 900;
+  font-size: 1.08em;
+}
+
+.homeText p:last-child {
+  font-size: 40px;
+}
+
+.homeText span {
+  font-size: 46px;
+  color: var(--honey);
+  font-weight: 900;
+}
+
+.homeKeywords {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.keyword {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #222;
+}
+
+.keyword span {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--honey);
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background: #d4d4d4;
+}
+
+.symbol {
+  width: 520px;
+  height: 520px;
+  position: relative;
+  justify-self: end;
+  top: -20px;
+}
+
+.symbolSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.symbolBgPath {
+  fill: #f8f3e8;
+  filter: drop-shadow(16px 22px 32px rgba(0, 0, 0, 0.08));
+}
+
+.symbolSvg line {
+  stroke: #333;
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+.node {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffd966 0%, #fbb902 55%, #f3a600 100%);
+  box-shadow: 8px 10px 18px rgba(0, 0, 0, 0.18);
+  z-index: 2;
+}
+
+.nodeTop {
+  width: 110px;
+  height: 110px;
+  top: 95px;
+  left: 205px;
+}
+
+.nodeLeft {
+  width: 95px;
+  height: 95px;
+  left: 120px;
+  top: 285px;
+}
+
+.nodeRight {
+  width: 80px;
+  height: 80px;
+  left: 310px;
+  top: 295px;
+}
+
+.symbolLine {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: opacity 0.08s linear, transform 0.08s linear;
+}
+
+.node {
+  transition: transform 0.08s linear;
+}
+@media (max-width: 768px) {
+   #home {
+    min-height: 200vh;
+     height: calc(100vh + 720px);
+  }
+    #home.homeFixed .homeInner,
+  #home.homeEnd .homeInner {
+    width: 100%;
+  }
+
+  .homeInner {
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+  }
+  .homeWrap {
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .symbol {
+    width: 280px;
+    height: 280px;
+    margin-top: 40px;
+  }
+
+  .homeLeft {
+    text-align: center;
+    align-items: center;
+    gap: 36px;
+  }
+
+  .homeText p:first-child {
+    font-size: 22px;
+    margin-bottom: 22px;
+  }
+
+  .homeText h1 {
+    font-size: 28px;
+    line-height: 1.45;
+  }
+
+  .homeText p:last-child {
+    font-size: 22px;
+  }
+
+  .homeText span {
+    font-size: 24px;
+  }
+
+  .homeKeywords {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 14px;
+    justify-content: center;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .keyword {
+    font-size: 11px;
+    gap: 7px;
+  }
+
+  .keyword span {
+    width: 8px;
+    height: 8px;
+  }
+
+  .nodeTop {
+    width: 60px;
+    height: 60px;
+    top: 50px;
+    left: 110px;
+  }
+
+  .nodeLeft {
+    width: 50px;
+    height: 50px;
+    top: 155px;
+    left: 65px;
+  }
+
+  .nodeRight {
+    width: 45px;
+    height: 45px;
+    top: 158px;
+    left: 175px;
+  }
+}
