@@ -45,7 +45,7 @@ Bee Portfolio는 저를 소개하기 위해 제작한 개인 포트폴리오 웹
 
 ## 🖼 Screenshot
 
-> 아래 이미지 파일명을 네가 저장한 캡처 이름으로 바꿔줘.
+
 
 ```md
 ![Bee Portfolio Screenshot](./src/assets/images/readme-preview.png)
