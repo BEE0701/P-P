@@ -108,8 +108,15 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: auto;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
+
+.moreView:hover {
+  opacity: 0.8;
+}
+
 
 .moreView p {
   font-size: 14px;
@@ -125,38 +132,85 @@
   height: 100%;
   overflow: hidden;
 }
-
+.proRight a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .proRight img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.6s ease;
+  transition: transform 0.3s ease;
 }
 
 
 .proBox:hover .proRight img {
-  transform: scale(1.05);
+  transform: scale(1.03);
+}
+.lotteImg {
+  object-position: center 30%;
 }
 .contactBox {
   width: min(1600px, 92%);
   margin: 90px auto 0;
-  padding: 44px 80px;
+  padding: 58px 80px;
   box-sizing: border-box;
-
   background: #f8f3e8;
   border: 1.5px solid #222;
-  border-radius: 999px;
+  border-radius: 54px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 48px;
 }
 
-.contactBox h3 {
+.contactLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contactLeft h3 {
   font-size: 36px;
   font-weight: 800;
   color: var(--black);
+}
+
+.githubLink {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: fit-content;
+  color: var(--black);
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.githubIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f2eadc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+.githubIcon img{
+  width: 100%;
+}
+.externalIcon {
+  width: 25px;
+  transform: rotate(-45deg);
+  
+}
+.externalIcon img{
+  width: 100%;
 }
 
 #btn {
@@ -166,10 +220,13 @@
   box-sizing: border-box;
   background: var(--honey);
   border-radius: 999px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 28px;
+
+  text-decoration: none;
 }
 
 #btn h3 {
@@ -182,6 +239,57 @@
 #btn img {
   width: 34px;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .contactBox {
+    width: min(100%, 90%);
+    margin: 20px auto;
+    padding: 34px 26px;
+    border-radius: 28px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+  }
+
+  .contactLeft {
+    gap: 22px;
+  }
+
+  .contactLeft h3 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .githubLink {
+    font-size: 15px;
+    gap: 10px;
+  }
+
+  .githubIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .externalIcon {
+    font-size: 17px;
+  }
+
+  #btn {
+    width: 100%;
+    min-width: 0;
+    height: 54px;
+    padding: 0 22px;
+  }
+
+  #btn h3 {
+    font-size: 16px;
+  }
+
+  #btn img {
+    width: 26px;
+  }
 }
 /* mobile */
 @media (max-width: 768px) {

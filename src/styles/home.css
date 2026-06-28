@@ -3,7 +3,6 @@ background: var(--lightGray);
   height: calc(100vh + 1300px);
   position: relative;
   overflow: hidden;
-
 }
 
 .homeInner {
@@ -164,12 +163,13 @@ background: var(--lightGray);
 }
 
 .node {
-  transition: transform 0.08s linear;
+  transition: none;
 }
 @media (max-width: 768px) {
-   #home {
-    min-height: 200vh;
-     height: calc(100vh + 720px);
+  #home {
+    height: 170vh;
+    min-height: 170vh;
+    overflow: hidden;
   }
     #home.homeFixed .homeInner,
   #home.homeEnd .homeInner {
@@ -241,7 +241,14 @@ background: var(--lightGray);
     width: 8px;
     height: 8px;
   }
+    .node {
+    transition: transform 0.14s ease-out;
+    will-change: transform;
+  }
 
+.symbolLine {
+    transition: opacity 0.14s ease-out, transform 0.14s ease-out;
+  }
   .nodeTop {
     width: 60px;
     height: 60px;

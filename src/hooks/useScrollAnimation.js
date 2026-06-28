@@ -39,10 +39,9 @@ function useScrollAnimation() {
 
       const isMobile = window.innerWidth <= 768;
 
-      const assembleDistance = isMobile ? 480 : 700;
-      const holdDistance = 1000;
-      const totalDistance = assembleDistance + holdDistance;
-
+      const assembleDistance = isMobile ? 400 : 700;
+const holdDistance = isMobile ? 250 : 1000;
+const totalDistance = assembleDistance + holdDistance;
       if (scrollInHome < 0) {
         home.classList.remove("homeFixed", "homeEnd");
       } else if (scrollInHome <= totalDistance) {

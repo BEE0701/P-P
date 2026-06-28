@@ -39,6 +39,7 @@
 @media (max-width: 768px) {
   #about {
     padding: 100px 0;
+    padding-top: 80px;
   }
 
   .aboutInner {

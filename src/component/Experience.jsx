@@ -7,7 +7,7 @@ function Experience() {
                 <div className="titleBox">
                     <h1>Every experience leaves something behind.</h1>
 
-                    <div className="beeIcon beeCrawler">
+                    <div className="beeIcon">
                         <svg viewBox="0 0 120 100" aria-hidden="true">
                             <defs>
                                 <linearGradient id="beeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
