@@ -32,7 +32,7 @@
 ## 🖼 Preview
 
 <p align="center">
- <img src="./images/preview.png" alt="Bee Portfolio Preview" width="850" />
+ <img src="./images/preview.png" alt="Bee Portfolio Preview" width="900">
 </p>
 
 <br />
